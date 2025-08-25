@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>秋の奈良 御所市縦断ウォークラリー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div>2025年 夢事業</div>
+    <nav>
+      <a href="#">トップページ</a> |
+      <a href="#">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+  <div class="countdown">
+  <h2>イベント開催まで</h2>
+  <div id="timer" class="timer-grid">
+    <div class="time-box">
+      <span id="days">0</span>
+      <small>日</small>
+    </div>
+    <div class="time-box">
+      <span id="hours">0</span>
+      <small>時間</small>
+    </div>
+    <div class="time-box">
+      <span id="minutes">0</span>
+      <small>分</small>
+    </div>
+    <div class="time-box">
+      <span id="seconds">0</span>
+      <small>秒</small>
+    </div>
+  </div>
+</div>
+  <div class="highlight">
+      <h2>都会からすぐ、四季折々の自然と</br>利便性で子育て世帯も快適</h2>
+      <h3>― 暮らすように歩く御所のまち ―</h3>
+      <h3><strong>2025年9月21日 (日曜日) 開催 (小雨決行) </strong></h3>
+      <p>※悪天候の場合は、2025年10月19日 (日) に延期</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <h4>都会に近く、自然豊かな御所市を「歩いて体感」する一日。</h4>
+    <p>
+      四季折々の美しい自然と、暮らしに便利な環境がそろう奈良県御所市。子育て世代にも人気のこの地で「<strong>秋の御所縦断ウォークラリー</strong>」を開催します。
+    </p>
+
+    <p>
+      このイベントは、<strong>御所市への移住や定住を検討している方</strong>や、<strong>御所市内に住んでいるけれど地域のことを広くは知らない方々</strong>に、まちの魅力を実際に歩いて体験していただくことを目的としています。地元のお店や観光スポットを巡りながら、<strong>地域の暮らしをリアルに感じていただける内容</strong>です。
+    </p>
+
+    <h4>ウォークラリーについて</h4>
+    <p>
+      <strong>地図をもとにチェックポイントを巡る「フォトロゲイニング」形式</strong>を採用。時間内に多くのスポットを訪れ、写真を撮ってポイントを集める、ゲーム感覚のウォークラリーです。御所の隠れた魅力を発見しながら、楽しく御所のまちを巡っていただけます。
+    </p>
+
+    <h4>開催概要</h4>
+    <ul>
+      <li><strong>開催日時：</strong>2025年9月21日（日曜日） 午前9時〜午後3時</li>
+      <li><strong>集合場所：</strong>JR御所駅広場（午前9時から10時まで随時受付）</li>
+      <li><strong>ゴール場所：</strong>葛城公園広場（雨天の場合はアザレアホール）</li>
+    </ul>
+
+    <h4>参加特典</h4>
+    <p>
+      参加者には抽選で宿泊付き市民交流会の招待チケットや、参加店舗で使える商品券、温浴施設の利用券など多数ご用意しています。
+    </p>
+
+    <div class="notice">
+      <strong>注意事項：</strong><br>
+      先着200名を超えた場合は参加をお断りする場合があります。<br>
+      当日体調不良の方は参加を控えてください。<br>
+      ルールや特典は事前の予告なく変更する場合があります。
+    </div>
+
+    <p>
+      移住者の視点で企画した本イベントは、地域の方との交流や、新たな出会いの場としても最適。参加者同士、そして地域住民とのつながりが、御所市での暮らしのイメージをさらに広げてくれるはずです。
+    </p>
+
+    <p>
+      <strong>自然と人、そして未来の暮らしに出会える特別な一日。</strong></br>ぜひ、御所市で「暮らすように歩く」体験をお楽しみください。
+    </p>
+
+  </main>
+
+  <footer>
+    共に広げよう大きな夢の輪実行委員会
+  </footer>
+
+<script>
+  const eventDate = new Date("2025-09-21T09:00:00+09:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance < 0) {
+      document.getElementById("timer").innerHTML = "<p>イベントは終了しました</p>";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+</body>
+</html>
