@@ -1,3 +1,8 @@
+/* 全体のボックスサイズを調整 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -323,7 +328,7 @@ footer {
   .hero {
     height: 720px;
   }
-    .countdown h2 {
+  .countdown h2 {
   margin-bottom: 0.2rem;
   font-size: 1.2rem;
   }
@@ -388,6 +393,10 @@ footer {
   flex-direction: column;
   gap: 24px;
   }
+  .qa-container {
+  max-width: 600px;
+  padding: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -436,6 +445,16 @@ footer {
   }
   .time-box span {
     font-size: 1.5rem;
+  }
+  .qa-title {
+    font-size: 22px;
+  }
+  .qa-question {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .qa-answer {
+    padding: 0 12px;
   }
   footer {
   height: 80px;
