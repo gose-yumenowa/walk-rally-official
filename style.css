@@ -1,5 +1,7 @@
 /* 全体のボックスサイズを調整 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -36,6 +38,17 @@ header a {
   background: url("./img/img_hero_pc.jpg") no-repeat center/cover;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .countdown {
   text-align: center;
   padding: 1rem;
@@ -62,7 +75,7 @@ header a {
   border-radius: 10px;
   min-width: 70px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .time-box span {
@@ -80,6 +93,7 @@ header a {
 }
 
 .highlight {
+  width: 100%;
   max-width: 848px;
   background: #ffffff;
   padding: 16px 40px;
@@ -143,10 +157,20 @@ ul {
   padding-left: 1.5rem;
 }
 
+.column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.column ul li {
+  margin-bottom: 24px;
+}
+
 .badge {
+  width: 100%;
   color: #ffffff;
   background-color: #b22222;
-  padding: 2px 8px;
+  padding: 0 8px;
   border-radius: 4px;
 }
 
@@ -187,7 +211,8 @@ ul {
 .schedule .title,
 .schedule .time {
   position: relative;
-  background: #ffffff; /* 親と同じ色で点線を隠す */
+  background: #ffffff;
+  /* 親と同じ色で点線を隠す */
   z-index: 1;
   padding: 0 0.4rem;
 }
@@ -208,7 +233,7 @@ ul {
   margin: 32px auto;
   background-color: #FFFFFF;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
@@ -323,60 +348,74 @@ footer {
 /* --- Responsive --- */
 @media (max-width: 1024px) {
   header {
-  font-size: 1rem;
+    font-size: 1rem;
   }
+
   .hero {
     height: 720px;
   }
+
   .countdown h2 {
-  margin-bottom: 0.2rem;
-  font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
   }
+
   .time-box {
     min-width: 60px;
     padding: 0.2rem 0.6rem;
   }
+
   .time-box span {
     font-size: 1.5rem;
   }
+
   .highlight {
-  max-width: 600px;
-  background: #ffffff;
-  padding: 8px 24px;
-  border-radius: 32px 32px 0 0;
-  text-align: center;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 8px 24px;
+    border-radius: 32px 32px 0 0;
+    text-align: center;
   }
+
   .highlight h2 {
-  font-size: 2rem;
-  line-height: 132%;
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    line-height: 132%;
+    margin-bottom: 0.5rem;
   }
+
   .container {
-  max-width: 600px;
+    max-width: 600px;
   }
+
   h3 {
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
   }
+
   p {
-  font-size: 1rem;
+    font-size: 1rem;
   }
+
   h4 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
   }
+
   ul {
-  font-size: 1rem;
+    font-size: 1rem;
   }
+
   .caption {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
   }
+
   .notice {
-  font-size: 1rem;
+    font-size: 1rem;
   }
+
   footer {
-  height: 128px;
-  padding-top: 1.5rem;
-  font-size: 1rem;
+    height: 128px;
+    padding-top: 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -385,17 +424,20 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
   }
+
   .hero {
     height: 600px;
   }
+
   .column {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
+
   .qa-container {
-  max-width: 600px;
-  padding: 20px;
+    max-width: 600px;
+    padding: 20px;
   }
 }
 
@@ -403,68 +445,86 @@ footer {
   .container {
     padding: 1.5rem 1rem;
   }
+
   .highlight h2 {
     font-size: 1.3rem;
   }
+
   h3 {
     font-size: 1rem;
     line-height: 1.2;
   }
+
   .hero {
     height: 600px;
     background: url("./img/img_hero_mobile.jpg") no-repeat center/cover;
   }
+
   .hero-contact {
     height: 400px;
     background: url("./img/img_hero_mobile-contact.jpg") no-repeat center/cover;
   }
+
   .countdown {
-  margin: 0;
+    margin: 0;
   }
+
   .timer-grid {
-  gap: 0.6rem;
+    gap: 0.6rem;
   }
+
   .time-box {
     min-width: 32px;
     margin-bottom: 8px !important;
     padding: 0.2rem 0 !important;
   }
+
   .time-box span {
     font-size: 1rem;
   }
+
   .time-box small {
-  font-size: 0.9rem;
-  margin-top: -8px;
+    font-size: 0.9rem;
+    margin-top: -8px;
   }
+
   .highlight {
-  max-width: 360px;
+    max-width: 360px;
   }
+
   .time-box {
     min-width: 60px;
     padding: 0.8rem 1rem;
   }
+
   .time-box span {
     font-size: 1.5rem;
   }
+
   .qa-title {
     font-size: 22px;
   }
+
   .qa-question {
     font-size: 16px;
     padding: 12px;
   }
+
   .qa-question a {
     text-decoration: none;
     color: #000000;
   }
+
   .qa-answer {
     padding: 0 12px;
   }
+
   .qa-answer p {
     font-size: 16px;
   }
+
   footer {
-  height: 80px;
-  padding-top: 1rem;
+    height: 80px;
+    padding-top: 1rem;
   }
 }
