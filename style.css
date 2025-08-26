@@ -293,6 +293,7 @@ footer {
   }
   .hero {
     height: 600px;
+      background: url("./img/img_hero_mobile.jpg") no-repeat center/cover;
   }
   .countdown {
   margin: 0;
