@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025 秋の奈良 御所縦断ウォークラリー | お問い合わせ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div>2025年 夢事業</div>
+    <nav>
+      <a href="index.html">ホーム</a> |
+      <a href="#">お問い合わせ</a>
+    </nav>
+  </header>
+
+  <section class="hero-contact">
+  <div class="countdown">
+  <h2>イベント開催まで</h2>
+  <div id="timer" class="timer-grid">
+    <div class="time-box">
+      <span id="days">0</span>
+      <small>日</small>
+    </div>
+    <div class="time-box">
+      <span id="hours">0</span>
+      <small>時間</small>
+    </div>
+    <div class="time-box">
+      <span id="minutes">0</span>
+      <small>分</small>
+    </div>
+    <div class="time-box">
+      <span id="seconds">0</span>
+      <small>秒</small>
+    </div>
+  </div>
+</div>
+  <div class="highlight">
+      <h2>お問い合わせとご予約</h2>
+      <p>下記フォームまたは直接メールでもOK！</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <p>
+      お問い合わせとご予約は、下記のボタンをクリックしてください（Googleフォームのページに切り替わります）
+    </p>
+
+    <div class="button">
+      <div class="flex-item">
+        <h3><a href="https://forms.gle/NCisXVBtjCMxagT57" target="_blank">お問い合わせ</a></h3>
+      </div>
+      <div class="flex-item">
+        <h3><a href="https://forms.gle/9Eh92JKssYf7rc5C9" target="_blank">事前予約</a></h3>
+      </div>
+    </div>
+
+    <p>
+      上のフォームがうまく動作しない場合は、下記のメールアドレスへお問い合わせください。
+    </p>
+
+    <div class="notice">
+      <strong>yumenowa2025@gmail.com</strong>
+    </div>
+
+    <p>
+      イベント当日は、皆様のご参加をスタッフ一同楽しみにしております！
+    </p>
+
+  </main>
+
+  <footer>
+    共に広げよう大きな夢の輪実行委員会
+  </footer>
+
+<script>
+  const eventDate = new Date("2025-09-21T09:00:00+09:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance < 0) {
+      document.getElementById("timer").innerHTML = "<p>イベントは終了しました</p>";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
+</body>
+</html>
