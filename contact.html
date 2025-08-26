@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2025 秋の奈良 御所縦断ウォークラリー | お問い合わせ</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <header>
     <div>2025年 夢事業</div>
     <nav>
       <a href="index.html">ホーム</a> |
+      <a href="qa.html">よくある質問と回答</a> |
       <a href="#">お問い合わせ</a>
     </nav>
   </header>
 
   <section class="hero-contact">
-  <div class="countdown">
-  <h2>イベント開催まで</h2>
-  <div id="timer" class="timer-grid">
-    <div class="time-box">
-      <span id="days">0</span>
-      <small>日</small>
+    <div class="countdown">
+      <h2>イベント開催まで</h2>
+      <div id="timer" class="timer-grid">
+        <div class="time-box">
+          <span id="days">0</span>
+          <small>日</small>
+        </div>
+        <div class="time-box">
+          <span id="hours">0</span>
+          <small>時間</small>
+        </div>
+        <div class="time-box">
+          <span id="minutes">0</span>
+          <small>分</small>
+        </div>
+        <div class="time-box">
+          <span id="seconds">0</span>
+          <small>秒</small>
+        </div>
+      </div>
     </div>
-    <div class="time-box">
-      <span id="hours">0</span>
-      <small>時間</small>
-    </div>
-    <div class="time-box">
-      <span id="minutes">0</span>
-      <small>分</small>
-    </div>
-    <div class="time-box">
-      <span id="seconds">0</span>
-      <small>秒</small>
-    </div>
-  </div>
-</div>
-  <div class="highlight">
+    <div class="highlight">
       <h2>お問い合わせとご予約</h2>
       <p>下記フォームまたは直接メールでもOK！</p>
     </div>
@@ -76,32 +79,33 @@
     共に広げよう大きな夢の輪実行委員会
   </footer>
 
-<script>
-  const eventDate = new Date("2025-09-21T09:00:00+09:00").getTime();
+  <script>
+    const eventDate = new Date("2025-09-21T09:00:00+09:00").getTime();
 
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = eventDate - now;
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
 
-    if (distance < 0) {
-      document.getElementById("timer").innerHTML = "<p>イベントは終了しました</p>";
-      return;
+      if (distance < 0) {
+        document.getElementById("timer").innerHTML = "<p>イベントは終了しました</p>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").textContent = hours;
-    document.getElementById("minutes").textContent = minutes;
-    document.getElementById("seconds").textContent = seconds;
-  }
-
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
-</script>
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 
 </body>
+
 </html>
