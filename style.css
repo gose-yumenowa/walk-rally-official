@@ -75,9 +75,9 @@ header a {
 }
 
 .highlight {
-  width: 848px;
+  max-width: 848px;
   background: #ffffff;
-  padding: 16px;
+  padding: 16px 40px;
   border-radius: 48px 48px 0 0;
   text-align: center;
 }
@@ -86,6 +86,16 @@ header a {
   max-width: 848px;
   margin: 0 auto;
   padding: 2rem 1rem;
+}
+
+.column {
+  display: flex;
+  gap: 24px;
+}
+
+.flex-item {
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .highlight h2 {
@@ -99,6 +109,12 @@ p {
   font-size: 1.2rem;
   line-height: 180%;
   margin: 0.5rem 0;
+}
+
+.caption {
+  font-size: 1rem;
+  margin: 4px 0 8px;
+  line-height: 140%;
 }
 
 h3 {
@@ -120,6 +136,55 @@ ul {
   font-size: 1.2rem;
   line-height: 180%;
   padding-left: 1.5rem;
+}
+
+.badge {
+  color: #ffffff;
+  background-color: #b22222;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.schedule {
+  font-size: 1.2rem;
+}
+
+.schedule ul {
+  min-width: 320px;
+  max-width: 480px;
+  list-style: none;
+  padding: 0;
+}
+
+.schedule li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* 点線（行全体に引く） */
+.schedule li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-bottom: 2px dotted #000000;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.schedule .title {
+  font-weight: 600;
+}
+
+.schedule .title,
+.schedule .time {
+  position: relative;
+  background: #ffffff; /* 親と同じ色で点線を隠す */
+  z-index: 1;
+  padding: 0 0.4rem;
 }
 
 .notice {
@@ -162,7 +227,7 @@ footer {
   .highlight {
   max-width: 600px;
   background: #ffffff;
-  padding: 8px;
+  padding: 8px 24px;
   border-radius: 32px 32px 0 0;
   text-align: center;
   }
@@ -187,6 +252,9 @@ footer {
   ul {
   font-size: 1rem;
   }
+  .caption {
+  font-size: 0.9rem;
+  }
   .notice {
   font-size: 1rem;
   }
@@ -204,6 +272,11 @@ footer {
   }
   .hero {
     height: 600px;
+  }
+  .column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   }
 }
 
@@ -240,7 +313,7 @@ footer {
   margin-top: -8px;
   }
   .highlight {
-  max-width: 375px;
+  max-width: 360px;
   }
   .time-box {
     min-width: 60px;
