@@ -50,18 +50,32 @@
 
   <main class="container">
     <h4>都会に近く、自然豊かな御所市を「歩いて体感」する一日。</h4>
-    <p>
-      四季折々の美しい自然と、暮らしに便利な環境がそろう奈良県御所市。子育て世代にも人気のこの地で「<strong>秋の御所縦断ウォークラリー</strong>」を開催します。
-    </p>
-
-    <p>
-      このイベントは、<strong>御所市への移住や定住を検討している方</strong>や、<strong>御所市内に住んでいるけれど地域のことを広くは知らない方々</strong>に、まちの魅力を実際に歩いて体験していただくことを目的としています。地元のお店や観光スポットを巡りながら、<strong>地域の暮らしをリアルに感じていただける内容</strong>です。
-    </p>
+    <div class="intro">
+      <div class="intro-item">
+        <p>
+          四季折々の美しい自然と、暮らしに便利な環境がそろう奈良県御所市。子育て世代にも人気のこの地で「<strong>秋の御所縦断ウォークラリー</strong>」を開催します。
+        </p>
+        <p>
+          このイベントは、<strong>御所市への移住や定住を検討している方</strong>や、<strong>御所市内に住んでいるけれど地域のことを広くは知らない方々</strong>に、まちの魅力を実際に歩いて体験していただくことを目的としています。地元のお店や観光スポットを巡りながら、<strong>地域の暮らしをリアルに感じていただける内容</strong>です。
+        </p>
+      </div>
+      <div class="intro-item">
+        <img src="./img/img_about-gose-city.webp" class="gose-city" data-delay="0" alt="御所市の特徴説明画像" aria-describedby="desc1">
+        <div id="desc1" style="display:none;">
+          御所市は、電車や車で大阪市や奈良市から約60分、京都市から80分、奈良市の中西部に位置する自然豊かな田園都市です。金剛山と葛城山の麓に広がり、歴史と文化、そして美しい自然が調和した魅力的な街で、大阪などへのアクセスもよく、ベッドタウンとしても人気のエリアです。
+        </div>
+      </div>
+    </div>
 
     <h4>ウォークラリーについて</h4>
     <p>
       <strong>デジタルマップをもとにチェックポイントを巡る「フォトロゲイニング」形式</strong>を採用。時間内に多くのスポットを訪れ、写真を撮ってポイントを集める、ゲーム感覚のウォークラリーです。御所の隠れた魅力を発見しながら、楽しく御所のまちを巡っていただけます。
     </p>
+
+    <div class="fullwidth-container">
+      <img src="./img/img_rogaining-a.webp" class="side-image-l fade-in" data-delay="0" alt="郵便名柄館でロゲイニングしているイラスト">
+      <img src="./img/img_rogaining-b.webp" class="side-image-r fade-in" data-delay="400" alt="田園風景でロゲイニングしているイラスト">
+    </div>
 
     <h4>開催概要</h4>
     <ul>
@@ -91,6 +105,9 @@
       <li><span class="title">解散</span><span class="time">16:00～</span></li>
     </ul>
     </span>
+    <div class="mc-photo">
+      <img src="./img/img_shoko-sato.webp" class="side-image-l fade-in" data-delay="0" alt="MCさとうしょうこさんのプロフィール写真">
+    </div>
     </div>
     </div>
 
@@ -99,7 +116,7 @@
       参加者には抽選で宿泊付き市民交流会の招待チケットや、参加店舗で使える商品券、温浴施設の利用券など多数ご用意しています。
     </p>
 
-    <div class="notice">
+    <div class="notice scroll-effect">
       <strong>注意事項：</strong><br>
       先着200名を超えた場合は参加をお断りする場合があります。<br>
       当日体調不良の方は参加を控えてください。<br>
@@ -117,10 +134,12 @@
   </main>
 
   <footer>
-    主催：共に広げる大きな夢の輪実行委員会　後援：御所市
+    主催：共に広げる大きな夢の輪実行委員会</br>後援：御所市
   </footer>
 
-<script>
+  <script src="./js/scroll.js"></script>
+  <script src="./js/fadein.js"></script>
+  <script>
   const eventDate = new Date("2025-09-21T09:00:00+09:00").getTime();
 
   function updateCountdown() {
@@ -145,7 +164,7 @@
 
   setInterval(updateCountdown, 1000);
   updateCountdown();
-</script>
+  </script>
 
 </body>
 </html>
