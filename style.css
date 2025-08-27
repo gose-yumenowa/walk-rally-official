@@ -398,19 +398,6 @@ ul {
   background: url("./img/img_hero_pc-contact.jpg") no-repeat center/cover;
 }
 
-/* スクロール効果 */
-
-.scroll-effect {
-  opacity: 0;
-  transform: translateY(80px);
-  transition: all 0.8s ease-out;
-}
-
-.scroll-effect.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* フッター */
 
 footer {
