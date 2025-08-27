@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #A0141A;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #A0141A;
+}
+
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
