@@ -71,8 +71,18 @@ header nav {
   justify-content: end;
   align-items: center;
   width: 100%;
-  height: 972px;
+  height: 970px;
   background: url("./img/img_hero_pc.jpg") no-repeat center/cover;
+}
+
+.hero-en {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 970px;
+  background: url("./img/img_hero_pc_en.jpg") no-repeat center/cover;
 }
 
 .visually-hidden {
@@ -435,6 +445,16 @@ ul {
   background: url("./img/img_hero_pc-contact.jpg") no-repeat center/cover;
 }
 
+.hero-contact-en {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 720px;
+  background: url("./img/img_hero_pc-contact_en.jpg") no-repeat center/cover;
+}
+
 /* フッター */
 
 footer {
@@ -557,14 +577,14 @@ footer {
   }
 
   header nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .lang-switch {
-  margin: 8px auto 0;
-  font-size: 0.9rem;
+    margin: 8px auto 0;
+    font-size: 0.9rem;
   }
 
   .hero {
@@ -575,6 +595,16 @@ footer {
   .hero-contact {
     height: 400px;
     background: url("./img/img_hero_mobile-contact.jpg") no-repeat center/cover;
+  }
+
+  .hero-en {
+    height: 600px;
+    background: url("./img/img_hero_mobile_en.jpg") no-repeat center/cover;
+  }
+
+  .hero-contact-en {
+    height: 400px;
+    background: url("./img/img_hero_mobile-contact_en.jpg") no-repeat center/cover;
   }
 
   .countdown {
