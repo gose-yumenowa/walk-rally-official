@@ -370,6 +370,7 @@ ul {
   border: none;
   padding: 15px;
   font-size: 18px;
+  color: #000000;
   cursor: pointer;
   outline: none;
   transition: background 0.3s;
